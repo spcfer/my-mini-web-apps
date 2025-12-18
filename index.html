@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Mini Web App Tools</title>
+    <link href="css/inter.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #fff;
+            color: #333;
+            line-height: 1.5;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            text-align: center;
+            padding: 20px 20px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #e9ecef;
+        }        .profile-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin: 0 auto 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .profile-avatar:hover {
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+        }
+        .profile-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }        .header h1 {
+            margin: 0;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+        .header p {
+            margin: 10px 0 0;
+            color: #666;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            flex: 1;
+        }
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .tool-card {
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .tool-card:hover {
+            border-color: #007bff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 123, 255, 0.15);
+        }
+        .tool-icon {
+            font-size: 2rem;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+        .tool-card h3 {
+            margin: 0 0 8px;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        .tool-card p {
+            margin: 0 0 15px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .tool-card a {
+            display: inline-block;
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        .tool-card a:hover {
+            text-decoration: underline;
+        }
+        .contact {
+            padding: 10px 0;
+            text-align: center;
+        }
+        .contact h2 {
+            margin: 0 0 15px;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        .contact-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+        }
+        .contact-item i {
+            color: #007bff;
+        }
+        .contact-item a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background: #f8f9fa;
+            border-top: 1px solid #e9ecef;
+            padding: 10px;
+            text-align: center;
+        }
+        .copyright {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 600px) {
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+            .contact-list {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="profile-avatar">
+            <img src="images/spc.jpg" alt="Sun Pengcheng">
+        </div>
+        <h1>迷你Web应用</h1>
+        <p>使用AI（DeepSeek, GPT, Gemini）生成的小工具集合</p>
+    </header>
+    <div class="container">
+        <div class="tools-grid">
+            <div class="tool-card">
+                <div class="tool-icon"><i class="fas fa-book-open"></i></div>
+                <h3>English Picture Book</h3>
+                <p>Create English picture books with AI</p>
+                <a href="../English_Picture_Book/index.html">Open</a>
+            </div>
+            <div class="tool-card">
+                <div class="tool-icon"><i class="fas fa-gift"></i></div>
+                <h3>Lucky Draw</h3>
+                <p>AI-powered lucky draw tool</p>
+                <a href="../Lucky_Draw/index.html">Open</a>
+            </div>
+            <div class="tool-card">
+                <div class="tool-icon"><i class="fas fa-calculator"></i></div>
+                <h3>AI Calculator</h3>
+                <p>Smart calculator with AI assistance</p>
+                <a href="#">Coming Soon</a>
+            </div>
+            <div class="tool-card">
+                <div class="tool-icon"><i class="fas fa-palette"></i></div>
+                <h3>Color Generator</h3>
+                <p>Generate beautiful color palettes</p>
+                <a href="#">Coming Soon</a>
+            </div>
+            <div class="tool-card">
+                <div class="tool-icon"><i class="fas fa-music"></i></div>
+                <h3>Music Player</h3>
+                <p>AI-powered music recommendations</p>
+                <a href="#">Coming Soon</a>
+            </div>
+            <div class="tool-card">
+                <div class="tool-icon"><i class="fas fa-camera"></i></div>
+                <h3>Photo Editor</h3>
+                <p>Edit photos with AI enhancements</p>
+                <a href="#">Coming Soon</a>
+            </div>
+            <!-- Add more tools here -->
+        </div>
+    </div>
+    
+    <!-- Contact Information Section - Portable -->
+    <footer>
+        <div class="contact">
+            <div class="contact-list">
+                <div class="contact-item">
+                    <i class="fab fa-weixin"></i>
+                    <span>bjhwtl</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-qq"></i>
+                    <span>52721859</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:pengcheng.sun.cn@gmail.com">pengcheng.sun.cn@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/sunpengcheng" target="_blank">LinkedIn</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-blog"></i>
+                    <a href="https://www.sunpengcheng.com" target="_blank">Blog</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-globe"></i>
+                    <a href="https://www.huaweitianli.com" target="_blank">HuaweiTianli</a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div>&copy; <span id="current-year"></span> 孙鹏程 (Sun Pengcheng). All rights reserved.</div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
